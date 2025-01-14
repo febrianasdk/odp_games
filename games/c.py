@@ -10,6 +10,21 @@ def c():
     KELUARAN
     153 adalah bilangan Armstrong
     """
+    
+    n = input("Masukkan angka yang ingin dicheck:")
+    hasil_check = checkArmstrong(n)
+    n = int(n)
+    if hasil_check == n:
+        print("angka adalah armstrong")
+    else:
+        print("bukan armstrong")
 
-    # write the code solution here
-    print("Mohon maaf, permainan C belum tersedia!")
+
+def checkArmstrong(n):
+    n_in_str = str(n)
+    n_digit= len(n_in_str)
+
+    sum_pow = sum(int(digit)**n_digit for digit in n_in_str)
+    return sum_pow
+
+
